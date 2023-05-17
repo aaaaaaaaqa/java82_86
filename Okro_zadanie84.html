@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> zadanie 84 Paweł Okrój </title>
+</head>
+<body>
+
+<script>
+dzis_okr = new Date();
+document.write("Aktualny czas : ",dzis_okr.getHours(),":",dzis_okr.getMinutes());
+</script>
+<div style="border:2px black solid;width: 10%;">
+<p id="czas_stopera">0.000</p>
+</div>
+<input type="button" name="Button1" value="START stoper" onclick="Stoper_Start_okr()">
+<input type="button" name="Button1" value="STOP stoper" onclick="Stoper_Stop_okr()">
+<script>
+var czas = 0;
+function Stoper_Start_okr() 
+{
+    var czas_stopera = document.getElementById("czas_stopera");
+    start_okr = new Date();
+    poczatek_okr = start_okr.getTime()
+}
+function Stoper_Stop_okr() 
+{
+    stop_okr = new Date();
+    koniec_okr = stop_okr.getTime()
+    roznica_okr = koniec_okr - poczatek_okr;
+    czas_stopera.innerHTML = roznica_okr/1000+" s";
+} 
+
+</script>
+</body>
+</html>

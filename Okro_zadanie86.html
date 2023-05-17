@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>zadanie 86 Paweł Okrój</title>
+<script language="JavaScript">
+</script>
+</head>
+
+<body>
+    <p id="pierwszy_okr"></p>
+    <p id="drugi_okr"></p>
+    <p id="trzeci_okr"></p>
+    <script>      
+        var data = new Date();
+        function OstatniaModyfikacja_okr()
+        {
+            document.getElementById("pierwszy_okr").innerHTML = "Ostatnia modyfikacja to: "+document.lastModified;        
+        }
+
+        
+        function AktualnaData_okr()
+        { 
+            document.getElementById("drugi_okr").innerHTML = "Aktualna data to: "+(data.getMonth()+1)+"."+data.getDate()+"."+data.getFullYear();       
+        }
+
+
+        function AktualnaGodzina_okr()
+        {
+            document.getElementById("trzeci_okr").innerHTML="Aktualna godzina to: "+data.getHours()+":"+data.getMinutes();        
+        }       
+    </script>
+    <div>
+    <form>      
+        <a onclick="OstatniaModyfikacja_okr(' ')">
+        <img src="przycisk1_okr.png" 
+        alt="Przycisk1" 
+        border="0"
+        height="150"
+        width="150"
+        onmouseover="this.src = 'przycisk2_okr.png'"
+         onmouseout="this.src ='przycisk1_okr.png'" /> 
+        </a>       
+    </form>
+
+    <table>       
+    <tr id="przycisk1_okr"></tr>     
+    </table>
+    <form>
+        <a onclick="AktualnaData_okr(' ')">
+        <img src="przycisk3_okr.png" 
+        alt="Przycisk2" 
+        border="0" 
+        height="150"
+        width="150"
+        onmouseover="this.src = 'przycisk4_okr.png'" 
+        onmouseout="this.src ='przycisk3_okr.png'" /> 
+        </a>        
+    </form>
+    <table>       
+        <tr id="AktualnaData_okr"></tr>        
+    </table>
+    <form>
+        <a onclick="AktualnaGodzina_okr(' ')"> 
+        <img src="przycisk5_okr.png" 
+        alt="Przycisk3"
+         border="0" 
+         height="150"
+         width="150"
+        onmouseover="this.src = 'przycisk6_okr.png'"
+        onmouseout="this.src ='przycisk5_okr.png'" />
+        </a>       
+    </form>   
+    <table>       
+        <tr id="AktualnaGodzina_okr"></tr>        
+    </table>
+</div>
+</body>
+</html>
